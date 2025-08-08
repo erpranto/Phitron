@@ -1,0 +1,18 @@
+#include<stdio.h>
+long long int frac(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+long long int mul =frac(n-1);
+    return n*mul;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+long long int fac=frac(n);
+    printf("%lld",fac);
+    return 0;
+}
